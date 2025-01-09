@@ -1,10 +1,11 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Root from "./components/Root/Root";
 import Statistics from "./components/Statistics";
 import Dashboard from "./components/Dashboard";
+import ProductDetails from "./components/ProductDetails";
+import './index.css';
 
 const router = createBrowserRouter([
   {
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
     path: "/dashboard",
     element: <Dashboard />,
   },
+  {
+    path: "/details/:product_id",
+    element: <ProductDetails />,
+  },
 ]);
 
 createRoot(document.getElementById("root")).render(
@@ -26,4 +31,3 @@ createRoot(document.getElementById("root")).render(
     <RouterProvider router={router} />
   </StrictMode>
 );
-

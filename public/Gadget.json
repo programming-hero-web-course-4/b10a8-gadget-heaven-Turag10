@@ -1,0 +1,88 @@
+[
+    {
+      "product_id": "P001",
+      "product_title": "Apple iPhone 15 Pro Max",
+      "product_image": "https://example.com/iphone15promax.jpg",
+      "category": "Smartphones",
+      "price": 1299,
+      "description": "Experience the ultimate smartphone with the iPhone 15 Pro Max.",
+      "specification": [
+        "6.7-inch Super Retina XDR display",
+        "A17 Bionic chip",
+        "Triple-camera system (48MP Main, 12MP Telephoto, 12MP Ultrawide)",
+        "LiDAR Scanner",
+        "Up to 2TB storage"
+      ],
+      "availability": true,
+      "rating": 4.8
+    },
+    {
+      "product_id": "P002",
+      "product_title": "Samsung Galaxy S23 Ultra",
+      "product_image": "/src/assets/s23.jpg",
+      "category": "Smartphones",
+      "price": 1199,
+      "description": "Redefine smartphone photography with the Galaxy S23 Ultra.",
+      "specification": [
+        "6.8-inch Dynamic AMOLED 2X display",
+        "Snapdragon 8 Gen 2",
+        "200MP Quad-camera system",
+        "Stylus Pen included",
+        "1TB storage option"
+      ],
+      "availability": true,
+      "rating": 4.7
+    },
+    {
+      "product_id": "P003",
+      "product_title": "Sony WH-1000XM5 Headphones",
+      "product_image": "https://example.com/sonywh1000xm5.jpg",
+      "category": "Accessories",
+      "price": 399,
+      "description": "Premium noise-canceling headphones for ultimate sound clarity.",
+      "specification": [
+        "30-hour battery life",
+        "Industry-leading noise cancellation",
+        "Lightweight design",
+        "Bluetooth 5.2",
+        "Quick charge support"
+      ],
+      "availability": true,
+      "rating": 4.9
+    },
+    {
+      "product_id": "P004",
+      "product_title": "Apple Watch Series 9",
+      "product_image": "https://example.com/applewatchseries9.jpg",
+      "category": "Wearables",
+      "price": 499,
+      "description": "The ultimate companion for a healthy life.",
+      "specification": [
+        "Always-on Retina display",
+        "Blood Oxygen and ECG sensors",
+        "Up to 18 hours of battery life",
+        "New S9 chip",
+        "Water resistance up to 50 meters"
+      ],
+      "availability": false,
+      "rating": 4.6
+    },
+    {
+      "product_id": "P005",
+      "product_title": "Dell XPS 15 Laptop",
+      "product_image": "https://example.com/dellxps15.jpg",
+      "category": "Laptops",
+      "price": 1799,
+      "description": "Powerful performance meets premium design with the Dell XPS 15.",
+      "specification": [
+        "15.6-inch 4K UHD+ display",
+        "Intel Core i9 13th Gen",
+        "NVIDIA RTX 4070",
+        "1TB SSD",
+        "16GB DDR5 RAM"
+      ],
+      "availability": true,
+      "rating": 4.5
+    }
+  ]
+  
