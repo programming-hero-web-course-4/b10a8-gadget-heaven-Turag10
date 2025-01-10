@@ -2,7 +2,7 @@
     {
       "product_id": "P001",
       "product_title": "Apple iPhone 15 Pro Max",
-      "product_image": "https://example.com/iphone15promax.jpg",
+      "product_image": "/src/assets/Apple.jpg",
       "category": "Smartphones",
       "price": 1299,
       "description": "Experience the ultimate smartphone with the iPhone 15 Pro Max.",
@@ -70,7 +70,7 @@
     {
       "product_id": "P005",
       "product_title": "Dell XPS 15 Laptop",
-      "product_image": "https://example.com/dellxps15.jpg",
+      "product_image": "/src/assets/dell.jpg",
       "category": "Laptops",
       "price": 1799,
       "description": "Powerful performance meets premium design with the Dell XPS 15.",

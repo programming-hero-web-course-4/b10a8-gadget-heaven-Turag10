@@ -1,9 +1,11 @@
 import { Link } from "react-router-dom";
 import { FaFlag, FaShoppingCart } from "react-icons/fa";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
+import  CartContext  from "../CartContext";
 
 const Root = () => {
   const [gadgets, setGadgets] = useState([]);
+  const { cartCount } = useContext(CartContext);
 
   useEffect(() => {
     fetch("/Gadget.json") // Ensure this path is correct
@@ -14,7 +16,7 @@ const Root = () => {
 
   return (
     <div>
-      {/* Navbar */}
+    
       <nav className="bg-purple-600 text-white p-4">
         <div className="container mx-auto flex justify-between items-center">
           {/* Left: Brand Name */}
@@ -40,9 +42,16 @@ const Root = () => {
           </ul>
 
           {/* Right: Icons */}
-          <div className="flex gap-4">
+          <div className="flex gap-4 items-center">
             <FaFlag className="text-lg cursor-pointer hover:text-gray-200" />
-            <FaShoppingCart className="text-lg cursor-pointer hover:text-gray-200" />
+            <div className="relative">
+              <FaShoppingCart className="text-lg cursor-pointer hover:text-gray-200" />
+              {cartCount > 0 && (
+                <span className="absolute -top-2 -right-2 bg-red-600 text-white text-xs rounded-full px-2">
+                  {cartCount}
+                </span>
+              )}
+            </div>
           </div>
         </div>
       </nav>
@@ -82,12 +91,11 @@ const Root = () => {
             <h3 className="text-2xl font-bold mb-4 text-purple-600">
               Discover Our Latest Accessories
             </h3>
-            
             <Link
               to="/shop"
               className="bg-purple-600 text-white font-semibold px-6 py-2 rounded-full hover:bg-purple-700"
             >
-      
+              Explore More
             </Link>
           </div>
         </div>
@@ -97,7 +105,7 @@ const Root = () => {
       <section className="bg-gray-100 py-12">
         <div className="container mx-auto">
           <h3 className="text-3xl font-bold text-center text-purple-600 mb-8">
-          
+            Latest Gadgets
           </h3>
 
           {/* Gadget Grid */}

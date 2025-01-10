@@ -5,7 +5,8 @@ import Root from "./components/Root/Root";
 import Statistics from "./components/Statistics";
 import Dashboard from "./components/Dashboard";
 import ProductDetails from "./components/ProductDetails";
-import './index.css';
+import { CartProvider } from "./components/CartContext";
+import "./index.css";
 
 const router = createBrowserRouter([
   {
@@ -28,6 +29,9 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <CartProvider>
+      <RouterProvider router={router} />
+    </CartProvider>
   </StrictMode>
+  
 );
