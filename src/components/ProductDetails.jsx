@@ -1,13 +1,13 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState, useContext } from "react";
 import { Link } from "react-router-dom";
-import { FaFlag, FaShoppingCart } from "react-icons/fa";
+import { FaFlag, FaShoppingCart, FaHeart } from "react-icons/fa";
 import CartContext from "../components/CartContext";
 
 const ProductDetails = () => {
-  const { product_id } = useParams(); // Extract product_id from the URL
+  const { product_id } = useParams();
   const [product, setProduct] = useState(null); // State for storing the fetched product
-  const { addToCart, cartCount } = useContext(CartContext); // Using CartContext to manage cart operations
+  const { addToCart, addToWishlist } = useContext(CartContext);
 
   // Fetch product details when component mounts
   useEffect(() => {
@@ -53,11 +53,8 @@ const ProductDetails = () => {
             <FaFlag className="text-lg cursor-pointer hover:text-gray-200" />
             <div className="relative">
               <FaShoppingCart className="text-lg cursor-pointer hover:text-gray-200" />
-              {cartCount > 0 && (
-                <span className="absolute -top-2 -right-2 bg-red-600 text-white text-xs rounded-full px-2">
-                  {cartCount}
-                </span>
-              )}
+              {/* Cart quantity display */}
+              {/* ... */}
             </div>
           </div>
         </div>
@@ -120,9 +117,17 @@ const ProductDetails = () => {
               {/* Add to Cart Button */}
               <button
                 onClick={() => addToCart(product)}
-                className="bg-purple-600 text-white font-semibold px-6 py-2 rounded-full hover:bg-purple-700"
+                className="bg-purple-600 text-white font-semibold px-6 py-2 rounded-full hover:bg-purple-700 mr-4"
               >
                 Add to Cart
+              </button>
+
+              {/* Add to Wishlist Button */}
+              <button
+                onClick={() => addToWishlist(product)}
+                className="bg-blue-500 text-white font-semibold px-6 py-2 rounded-full hover:bg-blue-600"
+              >
+                <FaHeart /> Wishlist
               </button>
             </div>
           </div>

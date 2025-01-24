@@ -5,6 +5,7 @@ import Root from "./components/Root/Root";
 import Statistics from "./components/Statistics";
 import Dashboard from "./components/Dashboard";
 import ProductDetails from "./components/ProductDetails";
+import Sidebar from "./components/Sidebar";
 import { CartProvider } from "./components/CartContext";
 import "./index.css";
 
@@ -22,9 +23,16 @@ const router = createBrowserRouter([
     element: <Dashboard />,
   },
   {
+    path: "/dashboard",
+    element: <Sidebar />,
+  },
+  {
     path: "/details/:product_id",
     element: <ProductDetails />,
   },
+  
+
+
 ]);
 
 createRoot(document.getElementById("root")).render(

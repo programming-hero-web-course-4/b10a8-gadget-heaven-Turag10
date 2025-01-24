@@ -1,18 +1,44 @@
-import { createContext, useContext, useState } from "react";
+import React, { createContext, useState } from "react";
 import PropTypes from "prop-types";
-
 
 const CartContext = createContext();
 
 export const CartProvider = ({ children }) => {
-  const [cartCount, setCartCount] = useState(0);
+  const [cartItems, setCartItems] = useState([]);
+  const [wishlistItems, setWishlistItems] = useState([]);
 
-  const addToCart = () => {
-    setCartCount((prevCount) => prevCount + 1);
+  const totalCost = cartItems.reduce((acc, item) => acc + item.price, 0);
+
+  const removeFromCart = (id) => {
+    setCartItems((prevItems) => prevItems.filter((item) => item.id !== id));
+  };
+
+  const addToCart = (product) => {
+    setCartItems((prevCart) => [...prevCart, product]); // Add product to cart
+  };
+
+  const addToWishlist = (product) => {
+    setWishlistItems((prevWishlist) => [...prevWishlist, product]); // Add product to wishlist
+  };
+
+  const sortByPrice = () => {
+    setCartItems((prevItems) =>
+      [...prevItems].sort((a, b) => a.price - b.price)
+    );
   };
 
   return (
-    <CartContext.Provider value={{ cartCount, addToCart }}>
+    <CartContext.Provider
+      value={{
+        cartItems,
+        wishlistItems,
+        totalCost: totalCost.toFixed(2),
+        addToCart,
+        removeFromCart,
+        addToWishlist,
+        sortByPrice,
+      }}
+    >
       {children}
     </CartContext.Provider>
   );
@@ -22,13 +48,4 @@ CartProvider.propTypes = {
   children: PropTypes.node.isRequired,
 };
 
-export const useCart = () => {
-  const context = useContext(CartContext);
-  if (!context) {
-    throw new Error("useCart must be used within a CartProvider");
-  }
-  return context;
-};
-
 export default CartContext;
-

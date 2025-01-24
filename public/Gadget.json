@@ -1,88 +1,208 @@
 [
-    {
-      "product_id": "P001",
-      "product_title": "Apple iPhone 15 Pro Max",
-      "product_image": "/src/assets/Apple.jpg",
-      "category": "Smartphones",
-      "price": 1299,
-      "description": "Experience the ultimate smartphone with the iPhone 15 Pro Max.",
-      "specification": [
-        "6.7-inch Super Retina XDR display",
-        "A17 Bionic chip",
-        "Triple-camera system (48MP Main, 12MP Telephoto, 12MP Ultrawide)",
-        "LiDAR Scanner",
-        "Up to 2TB storage"
-      ],
-      "availability": true,
-      "rating": 4.8
-    },
-    {
-      "product_id": "P002",
-      "product_title": "Samsung Galaxy S23 Ultra",
-      "product_image": "/src/assets/s23.jpg",
-      "category": "Smartphones",
-      "price": 1199,
-      "description": "Redefine smartphone photography with the Galaxy S23 Ultra.",
-      "specification": [
-        "6.8-inch Dynamic AMOLED 2X display",
-        "Snapdragon 8 Gen 2",
-        "200MP Quad-camera system",
-        "Stylus Pen included",
-        "1TB storage option"
-      ],
-      "availability": true,
-      "rating": 4.7
-    },
-    {
-      "product_id": "P003",
-      "product_title": "Sony WH-1000XM5 Headphones",
-      "product_image": "https://example.com/sonywh1000xm5.jpg",
-      "category": "Accessories",
-      "price": 399,
-      "description": "Premium noise-canceling headphones for ultimate sound clarity.",
-      "specification": [
-        "30-hour battery life",
-        "Industry-leading noise cancellation",
-        "Lightweight design",
-        "Bluetooth 5.2",
-        "Quick charge support"
-      ],
-      "availability": true,
-      "rating": 4.9
-    },
-    {
-      "product_id": "P004",
-      "product_title": "Apple Watch Series 9",
-      "product_image": "https://example.com/applewatchseries9.jpg",
-      "category": "Wearables",
-      "price": 499,
-      "description": "The ultimate companion for a healthy life.",
-      "specification": [
-        "Always-on Retina display",
-        "Blood Oxygen and ECG sensors",
-        "Up to 18 hours of battery life",
-        "New S9 chip",
-        "Water resistance up to 50 meters"
-      ],
-      "availability": false,
-      "rating": 4.6
-    },
-    {
-      "product_id": "P005",
-      "product_title": "Dell XPS 15 Laptop",
-      "product_image": "/src/assets/dell.jpg",
-      "category": "Laptops",
-      "price": 1799,
-      "description": "Powerful performance meets premium design with the Dell XPS 15.",
-      "specification": [
-        "15.6-inch 4K UHD+ display",
-        "Intel Core i9 13th Gen",
-        "NVIDIA RTX 4070",
-        "1TB SSD",
-        "16GB DDR5 RAM"
-      ],
-      "availability": true,
-      "rating": 4.5
-    }
-  ]
-  
+  {
+    "product_id": "P001",
+    "product_title": "Apple iPhone 15 Pro Max",
+    "product_image": "/src/assets/Apple.jpg",
+    "category": "Smartphones",
+    "Item-type":"All",
+    "price": 1299,
+    "description": "Experience the ultimate smartphone with the iPhone 15 Pro Max.",
+    "specification": [
+      "6.7-inch Super Retina XDR display",
+      "A17 Bionic chip",
+      "Triple-camera system (48MP Main, 12MP Telephoto, 12MP Ultrawide)",
+      "LiDAR Scanner",
+      "Up to 2TB storage"
+    ],
+    "availability": true,
+    "rating": 4.8
+  },
+  {
+    "product_id": "P002",
+    "product_title": "Samsung Galaxy S23 Ultra",
+    "product_image": "/src/assets/s23.jpg",
+    "category": "Smartphones",
+    "Item-type":"All",
+    "price": 1199,
+    "description": "Redefine smartphone photography with the Galaxy S23 Ultra.",
+    "specification": [
+      "6.8-inch Dynamic AMOLED 2X display",
+      "Snapdragon 8 Gen 2",
+      "200MP Quad-camera system",
+      "Stylus Pen included",
+      "1TB storage option"
+    ],
+    "availability": true,
+    "rating": 4.7
+  },
+  {
+    "product_id": "P003",
+    "product_title": "Sony WH-1000XM5 Headphones",
+    "product_image": "https://example.com/sonywh1000xm5.jpg",
+    "category": "Accessories",
+    "price": 399,
+    "description": "Premium noise-canceling headphones for ultimate sound clarity.",
+    "specification": [
+      "30-hour battery life",
+      "Industry-leading noise cancellation",
+      "Lightweight design",
+      "Bluetooth 5.2",
+      "Quick charge support"
+    ],
+    "availability": true,
+    "rating": 4.9
+  },
+  {
+    "product_id": "P004",
+    "product_title": "Apple Watch Series 9",
+    "product_image": "https://example.com/applewatchseries9.jpg",
+    "category": "Wearables",
+    "price": 499,
+    "description": "The ultimate companion for a healthy life.",
+    "specification": [
+      "Always-on Retina display",
+      "Blood Oxygen and ECG sensors",
+      "Up to 18 hours of battery life",
+      "New S9 chip",
+      "Water resistance up to 50 meters"
+    ],
+    "availability": false,
+    "rating": 4.6
+  },
+  {
+    "product_id": "P005",
+    "product_title": "Dell XPS 15 Laptop",
+    "product_image": "/src/assets/dell.jpg",
+    "category": "Laptops",
+    "price": 1799,
+    "description": "Powerful performance meets premium design with the Dell XPS 15.",
+    "specification": [
+      "15.6-inch 4K UHD+ display",
+      "Intel Core i9 13th Gen",
+      "NVIDIA RTX 4070",
+      "1TB SSD",
+      "16GB DDR5 RAM"
+    ],
+    "availability": true,
+    "rating": 4.5
+  },
+  {
+    "product_id": "P006",
+    "product_title": "Bose QuietComfort 45",
+    "product_image": "https://example.com/boseqc45.jpg",
+    "category": "Accessories",
+    "price": 329,
+    "description": "Comfortable and superior noise cancellation headphones.",
+    "specification": [
+      "24-hour battery life",
+      "Quiet & Aware modes",
+      "Bluetooth 5.1",
+      "Lightweight & comfortable fit",
+      "USB-C fast charging"
+    ],
+    "availability": true,
+    "rating": 4.7
+  },
+  {
+    "product_id": "P007",
+    "product_title": "HP Envy x360 Convertible",
+    "product_image": "/src/assets/hp.jpg",
+    "category": "Laptops",
+    "price": 999,
+    "description": "A versatile and sleek 2-in-1 laptop for professionals.",
+    "specification": [
+      "13.3-inch OLED touch display",
+      "AMD Ryzen 7 5800U",
+      "16GB RAM, 512GB SSD",
+      "Windows 11 Home",
+      "360-degree hinge"
+    ],
+    "availability": true,
+    "rating": 4.4
+  },
+  {
+    "product_id": "P008",
+    "product_title": "Apple AirPods Pro 2nd Gen",
+    "product_image": "https://example.com/airpodspro2.jpg",
+    "category": "Accessories",
+    "price": 249,
+    "description": "Immersive sound and active noise cancellation in a compact form.",
+    "specification": [
+      "Active Noise Cancellation",
+      "Spatial Audio",
+      "MagSafe Charging Case",
+      "6 hours of listening time per charge",
+      "Sweat and water resistance"
+    ],
+    "availability": true,
+    "rating": 4.8
+  },
+  {
+    "product_id": "P009",
+    "product_title": "Sony Alpha A7 IV Mirrorless Camera",
+    "product_image": "https://example.com/sonya7iv.jpg",
+    "category": "Cameras",
+    "price": 2499,
+    "description": "Capture stunning photos and 4K videos with the Sony Alpha A7 IV.",
+    "specification": [
+      "33MP Full-frame sensor",
+      "4K 60p video recording",
+      "5-axis image stabilization",
+      "Advanced autofocus system",
+      "Dual card slots"
+    ],
+    "availability": true,
+    "rating": 4.9
+  },
+  {
+    "product_id": "P010",
+    "product_title": "GoPro HERO12 Black",
+    "product_image": "https://example.com/goprohero12.jpg",
+    "category": "Cameras",
+    "price": 399,
+    "description": "The ultimate action camera for adventure enthusiasts.",
+    "specification": [
+      "5.3K video recording",
+      "Waterproof up to 33ft",
+      "HyperSmooth 5.0 stabilization",
+      "Live streaming capability",
+      "Compact and rugged design"
+    ],
+    "availability": true,
+    "rating": 4.8
+  },
+  {
+    "product_id": "P011",
+    "product_title": "Garmin Forerunner 955",
+    "product_image": "https://example.com/garmin955.jpg",
+    "category": "Wearables",
+    "price": 499,
+    "description": "Advanced GPS smartwatch for fitness and running enthusiasts.",
+    "specification": [
+      "Touchscreen and button controls",
+      "Multi-band GPS",
+      "Up to 15 days battery life",
+      "Heart rate and SpO2 monitoring",
+      "50m water resistance"
+    ],
+    "availability": true,
+    "rating": 4.7
+  },
+  {
+    "product_id": "P012",
+    "product_title": "Razer Blade 14 Gaming Laptop",
+    "product_image": "https://example.com/razerblade14.jpg",
+    "category": "Laptops",
+    "price": 2199,
+    "description": "Compact and powerful gaming laptop with stunning visuals.",
+    "specification": [
+      "14-inch QHD 165Hz display",
+      "AMD Ryzen 9 7940HS",
+      "NVIDIA GeForce RTX 4080",
+      "16GB DDR5 RAM, 1TB SSD",
+      "Razer Chroma keyboard"
+    ],
+    "availability": true,
+    "rating": 4.6
+  }
+]
