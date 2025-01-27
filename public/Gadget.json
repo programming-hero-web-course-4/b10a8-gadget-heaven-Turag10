@@ -38,7 +38,7 @@
   {
     "product_id": "P003",
     "product_title": "Sony WH-1000XM5 Headphones",
-    "product_image": "https://example.com/sonywh1000xm5.jpg",
+    "product_image": "/src/assets/sony.jpg",
     "category": "Accessories",
     "price": 399,
     "description": "Premium noise-canceling headphones for ultimate sound clarity.",
@@ -55,7 +55,7 @@
   {
     "product_id": "P004",
     "product_title": "Apple Watch Series 9",
-    "product_image": "https://example.com/applewatchseries9.jpg",
+    "product_image": "/src/assets/watch.jpg",
     "category": "Wearables",
     "price": 499,
     "description": "The ultimate companion for a healthy life.",
@@ -89,7 +89,7 @@
   {
     "product_id": "P006",
     "product_title": "Bose QuietComfort 45",
-    "product_image": "https://example.com/boseqc45.jpg",
+    "product_image": "/src/assets/bose.jpg",
     "category": "Accessories",
     "price": 329,
     "description": "Comfortable and superior noise cancellation headphones.",

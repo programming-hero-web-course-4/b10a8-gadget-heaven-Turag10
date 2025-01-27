@@ -1,14 +1,14 @@
 import { useContext } from "react";
-import { Link } from "react-router-dom"; // Import Link from react-router-dom
-import { FaFlag, FaShoppingCart, FaHeart } from "react-icons/fa"; // Import icons from react-icons
+import { Link } from "react-router-dom";
+import { FaFlag, FaShoppingCart } from "react-icons/fa";
 import CartContext from "./CartContext";
 
 const Dashboard = () => {
   const { cartItems, wishlistItems, totalCost, removeFromCart, sortByPrice } = useContext(CartContext);
-  const addToCart = cartItems.length; // Get the number of items in the cart
+  const addToCart = cartItems.length;
 
   return (
-    <div className="bg-gray-100 min-h-screen">
+    <div className="bg-gray-100 min-h-screen flex flex-col">
       {/* Navbar */}
       <nav className="bg-purple-600 text-white p-4">
         <div className="container mx-auto flex justify-between items-center">
@@ -53,8 +53,9 @@ const Dashboard = () => {
         </p>
       </div>
 
-      {/* Cart Section */}
-      <div className="container mx-auto mt-8">
+      {/* Main Content */}
+      <div className="flex-grow container mx-auto mt-8">
+        {/* Cart Section */}
         <div className="flex justify-between items-center bg-white shadow-md rounded-lg p-6">
           <h2 className="text-2xl font-bold text-gray-800">Cart</h2>
           <div className="flex items-center gap-4">
@@ -99,42 +100,79 @@ const Dashboard = () => {
             </div>
           ))}
         </div>
-      </div>
 
-      {/* Wishlist Section */}
-      <div className="container mx-auto mt-8">
-        <div className="flex justify-between items-center bg-white shadow-md rounded-lg p-6">
-          <h2 className="text-2xl font-bold text-gray-800">Wishlist</h2>
-        </div>
+        {/* Wishlist Section */}
+        <div className="mt-12">
+          <div className="flex justify-between items-center bg-white shadow-md rounded-lg p-6">
+            <h2 className="text-2xl font-bold text-gray-800">Wishlist</h2>
+          </div>
 
-        {/* Wishlist Items */}
-        <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {wishlistItems.map((item) => (
-            <div key={item.id} className="bg-white shadow rounded-lg p-4">
-              <div className="flex items-center">
-                <img
-                  src={item.image}
-                  alt={item.name || "Product Image"}
-                  className="w-24 h-24 object-cover rounded-lg mr-4"
-                />
-                <div>
-                  <h3 className="text-lg font-bold">{item.name || "Unnamed Product"}</h3>
-                  <p className="text-gray-600">
-                    Price: ${Number(item.price || 0).toFixed(2)}
-                  </p>
+          {/* Wishlist Items */}
+          <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {wishlistItems.map((item) => (
+              <div key={item.id} className="bg-white shadow rounded-lg p-4">
+                <div className="flex items-center">
+                  <img
+                    src={item.image}
+                    alt={item.name || "Product Image"}
+                    className="w-24 h-24 object-cover rounded-lg mr-4"
+                  />
+                  <div>
+                    <h3 className="text-lg font-bold">{item.name || "Unnamed Product"}</h3>
+                    <p className="text-gray-600">
+                      Price: ${Number(item.price || 0).toFixed(2)}
+                    </p>
+                  </div>
+                  <button
+                    onClick={() => addToCart(item)}
+                    className="ml-auto bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700"
+                  >
+                    Add to Cart
+                  </button>
                 </div>
-                {/* Add to Cart button for wishlist items */}
-                <button
-                  onClick={() => addToCart(item)}
-                  className="ml-auto bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700"
-                >
-                  Add to Cart
-                </button>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
+
+      {/* Footer */}
+      <footer className="bg-purple-600 text-white py-6 mt-12">
+        <div className="container mx-auto text-center">
+          <p className="text-sm">
+            &copy; {new Date().getFullYear()} Gadget Heaven. All rights reserved.
+          </p>
+          <p className="text-sm">
+            Follow us on{" "}
+            <a
+              href="https://facebook.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline hover:text-gray-300"
+            >
+              Facebook
+            </a>
+            ,{" "}
+            <a
+              href="https://twitter.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline hover:text-gray-300"
+            >
+              Twitter
+            </a>
+            , and{" "}
+            <a
+              href="https://instagram.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline hover:text-gray-300"
+            >
+              Instagram
+            </a>.
+          </p>
+        </div>
+      </footer>
     </div>
   );
 };

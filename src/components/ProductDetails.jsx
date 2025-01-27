@@ -6,10 +6,9 @@ import CartContext from "../components/CartContext";
 
 const ProductDetails = () => {
   const { product_id } = useParams();
-  const [product, setProduct] = useState(null); // State for storing the fetched product
+  const [product, setProduct] = useState(null);
   const { addToCart, addToWishlist } = useContext(CartContext);
 
-  // Fetch product details when component mounts
   useEffect(() => {
     fetch("/Gadget.json") // Path to your JSON file in the public folder
       .then((response) => response.json())
@@ -53,8 +52,6 @@ const ProductDetails = () => {
             <FaFlag className="text-lg cursor-pointer hover:text-gray-200" />
             <div className="relative">
               <FaShoppingCart className="text-lg cursor-pointer hover:text-gray-200" />
-              {/* Cart quantity display */}
-              {/* ... */}
             </div>
           </div>
         </div>
@@ -125,7 +122,7 @@ const ProductDetails = () => {
               {/* Add to Wishlist Button */}
               <button
                 onClick={() => addToWishlist(product)}
-                className="bg-blue-500 text-white font-semibold px-6 py-2 rounded-full hover:bg-blue-600"
+                className="bg-blue-500 text-white font-semibold px-6 py-2 rounded-full hover:bg-blue-600 flex items-center gap-2"
               >
                 <FaHeart /> Wishlist
               </button>
@@ -133,6 +130,83 @@ const ProductDetails = () => {
           </div>
         </div>
       </div>
+
+      {/* Footer */}
+      <footer className="bg-gray-100 py-8 border-t border-gray-200">
+        <div className="container mx-auto text-center">
+          <h2 className="text-xl font-semibold text-gray-800">Gadget Heaven</h2>
+          <p className="text-gray-500 mt-2">
+            Leading the way in cutting-edge technology and innovation.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-8">
+            <div>
+              <h3 className="text-gray-700 font-bold mb-4">Services</h3>
+              <ul className="text-gray-500 space-y-2">
+                <li>
+                  <a href="#" className="hover:underline">
+                    Product Support
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:underline">
+                    Order Tracking
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:underline">
+                    Shipping & Delivery
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:underline">
+                    Returns
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-gray-700 font-bold mb-4">Company</h3>
+              <ul className="text-gray-500 space-y-2">
+                <li>
+                  <a href="#" className="hover:underline">
+                    About Us
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:underline">
+                    Careers
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:underline">
+                    Contact
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-gray-700 font-bold mb-4">Legal</h3>
+              <ul className="text-gray-500 space-y-2">
+                <li>
+                  <a href="#" className="hover:underline">
+                    Terms of Service
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:underline">
+                    Privacy Policy
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:underline">
+                    Cookie Policy
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 };
