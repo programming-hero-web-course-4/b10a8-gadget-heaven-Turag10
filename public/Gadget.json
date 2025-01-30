@@ -123,7 +123,7 @@
   {
     "product_id": "P008",
     "product_title": "Apple AirPods Pro 2nd Gen",
-    "product_image": "https://example.com/airpodspro2.jpg",
+    "product_image": "/src/assets/airpods.jpg",
     "category": "Accessories",
     "price": 249,
     "description": "Immersive sound and active noise cancellation in a compact form.",
@@ -140,7 +140,7 @@
   {
     "product_id": "P009",
     "product_title": "Sony Alpha A7 IV Mirrorless Camera",
-    "product_image": "https://example.com/sonya7iv.jpg",
+    "product_image": "/src/assets/alpha.jpg",
     "category": "Cameras",
     "price": 2499,
     "description": "Capture stunning photos and 4K videos with the Sony Alpha A7 IV.",
@@ -157,7 +157,7 @@
   {
     "product_id": "P010",
     "product_title": "GoPro HERO12 Black",
-    "product_image": "https://example.com/goprohero12.jpg",
+    "product_image": "/src/assets/go.jpg",
     "category": "Cameras",
     "price": 399,
     "description": "The ultimate action camera for adventure enthusiasts.",
@@ -174,7 +174,7 @@
   {
     "product_id": "P011",
     "product_title": "Garmin Forerunner 955",
-    "product_image": "https://example.com/garmin955.jpg",
+    "product_image": "/src/assets/germin.jpg",
     "category": "Wearables",
     "price": 499,
     "description": "Advanced GPS smartwatch for fitness and running enthusiasts.",
@@ -191,7 +191,7 @@
   {
     "product_id": "P012",
     "product_title": "Razer Blade 14 Gaming Laptop",
-    "product_image": "https://example.com/razerblade14.jpg",
+    "product_image": "/src/assets/razer.jpg",
     "category": "Laptops",
     "price": 2199,
     "description": "Compact and powerful gaming laptop with stunning visuals.",

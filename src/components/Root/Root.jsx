@@ -79,7 +79,7 @@ const Root = () => {
             </div>
           </nav>
 
-          {/* Header Section */}
+         
           <header className="relative bg-purple-500 text-white text-center py-16">
             <div className="max-w-2xl mx-auto">
               <h2 className="text-4xl font-bold mb-4 leading-tight">
@@ -98,7 +98,7 @@ const Root = () => {
             </div>
             <div className="absolute left-1/2 transform -translate-x-1/2 bottom-[-300px]">
               <img
-                src="/src/assets/banner.jpg" // Replace with the actual image path
+                src="/src/assets/banner.jpg" 
                 alt="Gadget Heaven Accessories"
                 className="rounded-lg shadow-lg w-full max-w-sm lg:max-w-lg border-4 border-white"
               />

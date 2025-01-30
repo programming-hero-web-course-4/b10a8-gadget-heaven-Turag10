@@ -10,17 +10,16 @@ const ProductDetails = () => {
   const { addToCart, addToWishlist } = useContext(CartContext);
 
   useEffect(() => {
-    fetch("/Gadget.json") // Path to your JSON file in the public folder
+    fetch("/Gadget.json") 
       .then((response) => response.json())
       .then((data) => {
-        // Match product_id (ensure type consistency)
         const foundProduct = data.find((item) => item.product_id.toString() === product_id);
         setProduct(foundProduct);
       })
       .catch((error) => console.error("Error fetching product details:", error));
   }, [product_id]);
 
-  // If product data is not yet fetched, display a loading message
+  
   if (!product) {
     return <div className="text-center mt-12">Loading...</div>;
   }

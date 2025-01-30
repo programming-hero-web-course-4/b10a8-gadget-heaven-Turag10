@@ -14,11 +14,11 @@ export const CartProvider = ({ children }) => {
   };
 
   const addToCart = (product) => {
-    setCartItems((prevCart) => [...prevCart, product]); // Add product to cart
+    setCartItems((prevCart) => [...prevCart, product]); 
   };
 
   const addToWishlist = (product) => {
-    setWishlistItems((prevWishlist) => [...prevWishlist, product]); // Add product to wishlist
+    setWishlistItems((prevWishlist) => [...prevWishlist, product]);
   };
 
   const sortByPrice = () => {
